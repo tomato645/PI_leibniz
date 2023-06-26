@@ -6,7 +6,7 @@
 #include <list>
 #include <cstring>
 #include <chrono>
-#include<string>
+#include <string>
 
 long long int LOOP_TIME = 9999999999;
 std::vector<double> sumList;
@@ -66,7 +66,7 @@ int accuratePI(double calculatedPI)
     int count = 0;
     std::string correctDecimals = "3.14159265358979323846264338327950288419716939937";
     std::string calculatedPI_str = std::to_string(calculatedPI);
-    
+
     std::cout << "correct    = " << correctDecimals << std::endl;
     std::cout << "calculated = " << calculatedPI_str << std::endl;
 
@@ -93,14 +93,14 @@ int main(int argc, char *argv[])
 
     float threads_num = 8;
     float unit = LOOP_TIME / threads_num;
-    std::thread th1(calculate, unit*0, unit*1);
-    std::thread th2(calculate, unit*1, unit*2);
-    std::thread th3(calculate, unit*2, unit*3);
-    std::thread th4(calculate, unit*3, unit*4);
-    std::thread th5(calculate, unit*4, unit*5);
-    std::thread th6(calculate, unit*5, unit*6);
-    std::thread th7(calculate, unit*6, unit*7);
-    std::thread th8(calculate, unit*7, unit*8);
+    std::thread th1(calculate, unit * 0, unit * 1);
+    std::thread th2(calculate, unit * 1, unit * 2);
+    std::thread th3(calculate, unit * 2, unit * 3);
+    std::thread th4(calculate, unit * 3, unit * 4);
+    std::thread th5(calculate, unit * 4, unit * 5);
+    std::thread th6(calculate, unit * 5, unit * 6);
+    std::thread th7(calculate, unit * 6, unit * 7);
+    std::thread th8(calculate, unit * 7, unit * 8);
 
     std::cout << threads_num << "スレッドで計算します。" << std::endl;
 
