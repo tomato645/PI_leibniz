@@ -8,7 +8,7 @@
 #include <chrono>
 #include <string>
 
-long long int LOOP_TIME = 9999999999;
+long long int LOOP_TIME = 999999999;
 std::vector<double> sumList;
 bool huge = false;
 
@@ -122,12 +122,13 @@ int main(int argc, char *argv[])
     }
 
     double PI = sum * 4;
-    std::cout << "PI         = " << std::setprecision(99) << PI << std::endl;
 
     end = std::chrono::system_clock::now();
     double elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
-    std::cout << elapsed << "ms" << std::endl;
+    std::cout <<  "(" << elapsed<< "ms" << ")" << std::endl;
+
+    std::cout << "PI         = " << std::setprecision(99) << PI << std::endl;
 
     std::cout << std::endl;
-    accuratePI(PI);
+    // accuratePI(PI);
 }
